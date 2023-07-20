@@ -17,7 +17,6 @@ class Storage(service.KeyValueServiceServicer):
     def StoreValue(self, request, context):
         key = request.key
         value = request.value
-        print(value.update_time)
         print(f"store value (k = {key}, v = {value})")
         return stub.StoreValueResponse(code=200, message=f"stored (k = {key}, v = {value}, srp = )")
 
